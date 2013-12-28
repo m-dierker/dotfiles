@@ -80,7 +80,7 @@ function parse_git_branch() {
 	git branch --no-color 2> /dev/null | sed -e '/^[^*]/d' -e "s/* \(.*\)/\1$(parse_git_dirty)/"
 }
 
-export PS1="\[${BOLD}${GREEN}\]\u\[${CYAN}\]\$([[ -n \$(git branch --no-color 2> /dev/null) ]] && echo \" ($(parse_git_branch))\") \[${ORANGE}\]\W: \[${RESET}\]"
+export PS1="\[${BOLD}${GREEN}\]\u\[${CYAN}\]\$([[ -n \$(git branch --no-color 2> /dev/null) ]] && echo \" (\$(parse_git_branch))\") \[${ORANGE}\]\W: \[${RESET}\]"
 
 # init z! (https://github.com/rupa/z)
 . ~/z.sh
