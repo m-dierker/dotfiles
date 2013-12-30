@@ -5,7 +5,7 @@ export PATH=/usr/local/bin:$PATH
 # Get apps in your ~/bin directory
 export PATH=~/bin:$PATH
 # Add Pebble SDK to path
-export PATH=~/Documents/pebble-dev/PebbleSDK-2.0-BETA3/bin:$PATH
+export PATH=~/Documents/pebble-dev/PebbleSDK-2.0-BETA4/bin:$PATH
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 
@@ -82,5 +82,10 @@ function parse_git_branch() {
 
 export PS1="\[${BOLD}${GREEN}\]\u\[${CYAN}\]\$([[ -n \$(git branch --no-color 2> /dev/null) ]] && echo \" (\$(parse_git_branch))\") \[${ORANGE}\]\W: \[${RESET}\]"
 
+# Make Git Autocomplete work
+if [ -f ~/bin/git-completion.bash ]; then
+  . ~/bin/git-completion.bash
+fi
+
 # init z! (https://github.com/rupa/z)
-. ~/z.sh
+. ~/bin/z.sh
