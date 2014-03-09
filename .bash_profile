@@ -1,11 +1,13 @@
 ###### Add executables to the PATH
 
-# Get Homebrew apps before anything else
+# Get Homebrew apps
 export PATH=/usr/local/bin:$PATH
+# Other Homebrew apps
+export PATH=/usr/local/sbin:$PATH
 # Get apps in your ~/bin directory
 export PATH=~/bin:$PATH
 # Add Pebble SDK to path
-export PATH=~/Documents/pebble-dev/PebbleSDK-2.0.0/bin:$PATH
+export PATH=~/pebble-dev/PebbleSDK-current/bin:$PATH
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
 # Temporary, add LaSVM to the path
